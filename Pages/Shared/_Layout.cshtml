@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>@ViewData["Title"] - Tailwind</title>
+    <meta name="author" content="name" />
+    <meta name="description" content="description here" />
+    <meta name="keywords" content="keywords,here" />
+    <link rel="stylesheet" href="/css/tailwindoutput.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?&callback=getMap' async defer></script>
+</head>
+<style>
+    #dropdown:checked~#dropdownMenu {
+        height: 300px;
+        opacity: 100;
+        z-index: 100;
+    }
+</style>
+
+<body class="bg-gray-50 font-Inter">
+    <nav id="header" class="z-50 flex justify-between items-center px-10 py-2 h-14 shadow-md">
+        <div class="text-2xl">Trip Planit</div>
+        <div>
+            <input type="checkbox" class="absolute hidden" id="dropdown">
+            <label for="dropdown" class="cursor-pointer">
+                <svg class="h-10 w-10 fill-current text-green-500" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 32 32">
+                    <path
+                        d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 16 8 C 13.25 8 11 10.25 11 13 C 11 14.515625 11.707031 15.863281 12.78125 16.78125 C 10.53125 17.949219 9 20.300781 9 23 L 11 23 C 11 20.226563 13.226563 18 16 18 C 18.773438 18 21 20.226563 21 23 L 23 23 C 23 20.300781 21.46875 17.949219 19.21875 16.78125 C 20.292969 15.863281 21 14.515625 21 13 C 21 10.25 18.75 8 16 8 Z M 16 10 C 17.667969 10 19 11.332031 19 13 C 19 14.667969 17.667969 16 16 16 C 14.332031 16 13 14.667969 13 13 C 13 11.332031 14.332031 10 16 10 Z" />
+                </svg>
+            </label>
+            <div class="absolute h-64 right-0 opacity-0 duration-500 ease-in-out w-48 pt-2" id="dropdownMenu">
+                <ul class="border rounded-lg py-2 bg-gray-50 z-50 shadow-sm text-center text-gray-700">
+                    <li class="cursor-pointer hover:bg-green-400 hover:text-green-50 py-2">Profile</li>
+                    <li class="cursor-pointer hover:bg-green-400 hover:text-green-50 py-2">Saved Trips</li>
+                    <li class="cursor-pointer hover:bg-green-400 hover:text-green-50 py-2 flex items-center justify-evenly">
+                        Settings</li>
+                    <li class="cursor-pointer hover:bg-green-400 hover:text-green-50 py-2">Sign Out</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Container-->
+    <div class="">
+        @RenderBody()
+    </div>
+    <!--/container-->
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

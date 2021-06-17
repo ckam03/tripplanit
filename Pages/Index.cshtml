@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="flex items-center justify-center">
+<img style="height: calc(100vh - 3.5rem)" class="w-3/5" src="~/imgs/road.jpg" alt="road" /> 
+<div>
+
+</div>
+<form class="flex flex-col items-center w-2/5 space-y-5 p-6">
+    <h1 class="text-gray-900 text-2xl font-semibold text-center">Sign in to your account</h1>
+    <p class="text-gray-600 text-center">Don't have an account? <span class="text-green-400 font-semibold cursor-pointer">Sign up</span></p>
+    <div class="flex flex-col text-left w-2/3">
+    <label class="text-gray-600 pb-1 font-semibold">Email</label>
+    <input class="py-2 border border-gray-200 rounded-lg text-gray-500 px-2 focus:border-green-400 outline-none" type="text" placeholder="Email Address">
+    </div>
+    <div class="flex flex-col text-left w-2/3">
+
+    <label class="text-gray-600 pb-1 font-semibold">Password</label>
+    <input class="py-2 border border-gray-200 rounded-lg text-gray-500 px-2 focus:border-green-400 outline-none" type="text" placeholder="Password">
+    </div>
+<button class="border rounded-lg bg-green-400 hover:bg-green-600 text-green-50 font-Inter py-2 px-4 w-2/3"> 
+<a class="" asp-area=""asp-page="/Plan">Sign In</a></button>
+</form>
+</div>

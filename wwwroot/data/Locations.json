@@ -1,0 +1,26 @@
+[
+    {
+      "location": "Toronto",
+      "lat": 43.780918,
+      "lng": -79.421371,
+      "src": "/imgs/Toronto.jpg"
+    },
+    {
+      "location": "Banff National Park",
+      "lat": 51.180202,
+      "lng": -115.565704,
+      "src": "/imgs/Banff.jpg"
+    },
+    {
+      "location": "Yosemite National Park",
+      "lat": 37.865101,
+      "lng": -119.596848,
+      "src": "/imgs/Yosemite.jpg"
+    },
+    {
+      "location": "Yellowstone National Park",
+      "lat": 44.423691,
+      "lng": -110.588516,
+      "src": "/imgs/Yellowstone.jpg"
+    }
+  ]
